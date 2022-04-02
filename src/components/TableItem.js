@@ -7,11 +7,12 @@ const TableItem=(props)=>{
                   <>
                            
       <tr>
-        <td>{props.post.id}</td>
+        <td>{props.number}</td>
         <td>{props.post.title}</td>
         <td>{props.post.stack}</td>
         <td>
-          <Mybutton> Delete </Mybutton>
+          <Mybutton onClick={()=>props.remove(props.post)}
+          > Delete </Mybutton>
         </td>
       </tr>
     
