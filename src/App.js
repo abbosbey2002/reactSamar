@@ -28,7 +28,18 @@ function App() {
     <>
     <div className="app w-50 mx-auto">
     <PostForm createPost={createPost} />
-<TableList remove={removePost} posts={posts} title={'Favourite language'} />
+    <div className="text-right my-2 w-50">
+      <select className="form-select">
+        <option  >Sorted by title</option>
+        <option  >Sorted by Job</option>
+      </select>
+    </div>
+
+    {posts.length
+      ? <TableList remove={removePost} posts={posts} title={'Favourite language'} />
+    : <h6 className="my-3 text-center">You should add some Post</h6>
+    }
+
     </div>
   </>
   
